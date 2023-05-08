@@ -1,0 +1,160 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FFFFF;
+}
+
+h1 {
+  text-align: center;
+  font-family: arial;
+  color:#0032E5;
+}
+h2 {
+  text-align: center;
+  font-family: arial;
+}
+
+p, h3, li{
+  font-family: arial;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0032E5;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+    font-family: arial;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px;
+  font-size: 15px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+a:hover{
+  background: #414929
+}
+
+button{
+    appearance:none;
+    -webkit-appearance:none;
+
+    padding:10px;
+    margin-top: 10px;
+    border:none;
+    background-color:#0032E5;
+    color:#fff;
+    font-weight:600;
+    width:150px;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label{
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid rgba(87, 138, 255, 0.7);
+  font-size: 15px;
+  vertical-align: text-top;
+  border-radius: 3px;
+}
+
+.algo{
+    width:100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.algo-name{
+    font-family: arial;
+    font-size: 15px;
+    color: black;
+    margin: 20px 0;
+    height: 5px;
+}
+
+.algo-bar{
+    height:15px;
+    background: gray;
+    border-radius: 3px;
+}
+
+.algo-percent{
+    height: 15px;
+    background: #0032E5;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBar 3s 1;
+}
+
+.algo-percent::before{
+    content: attr(per);
+    font-family: arial;
+    color: white;
+    position: absolute;
+    padding: 4px 6px;
+    background: #0032E5;
+    border-radius: 4px;
+    font-size: 15px;
+    top: -35px;
+    right: 0;
+    transform: translate(50%);
+}
+
+.algo-percent::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    background: #0032E5;
+    border-radius: 2px;
+    top: -16px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+}
+
+@keyframes fillBar{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}

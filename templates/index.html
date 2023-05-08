@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Spam Detector</title>
+  <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <h1>Verity</h1>
+  <hr>
+  <div class="sidenav">
+    <a href="index">Home</a>
+    <a href="research">Email Checker</a>
+    <a href="about">About</a>
+
+  </div>
+  <h2>Welcome to our webpage</h2>
+  <br>
+  <div class="main">
+
+    <form class="form" method="POST">
+      <label for="email">Enter email address:</label>
+
+      <br>
+      <input type="text" name="email" value="" placeholder="Email Address"style="font-style:italic"> <br>
+      <br>
+
+    </form>
+    <p id="button"></p>
+    <button onclick="emailCheck()">Submit</button>
+
+  </div>
+  </div>
+  <!--<script src="script.js"></script>-->
+
+</body>
+
+</html>

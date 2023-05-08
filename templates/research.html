@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lan="en">
+<title>Spam Detector</title>
+
+<head>
+    <meta charset="utf-8">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <h1>Verity</h1>
+  <hr>
+
+  <div class="sidenav">
+    <a href="index">Home</a>
+    <a href="research">Email Checker</a>
+    <a href="about">About</a>
+
+  </div>
+  <div class="main">
+    <h3>Enter the contents of the email below</h3>
+    <form class="form" action="checkemail" method="post" align="justified">
+      <!--<label for="input">Enter contents of email:</label>
+      <br>-->
+      <textarea id="input" name="input" rows="5" cols="60" align="center" placeholder="Paste what was in the email here..."
+        style="font-style:italic"></textarea> <br>
+      <br>
+    <p id="button2"></p>
+      <button type="submit">Submit</button>
+     {% for message, per_value in get_flashed_messages(with_categories=true) %}
+        {% if message == 'per_message' %}
+            <div class="algo">
+                <div class="algo-name"></div>
+                <div class="algo-bar">
+                    <div class="algo-percent" per="{{ per_value }}" style="max-width:{{ per_value }}"></div>
+                </div>
+            </div>
+
+         {% else %}
+            <p>{{ per_value }}</p>
+         {% endif %}
+
+      {% endfor %}
+    </form>
+  </div>
+
+
+  <!--<script src="script.js"></script>-->
+
+</body>
+
+</html>
